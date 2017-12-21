@@ -1,16 +1,19 @@
-import {h, Component} from 'preact';
+import { h, Component } from 'preact';
 import moment from 'moment';
 import styled from 'styled-components';
 
 
 const Wrapper = styled.button`
-	padding: 0.8em 0.4em;
-	border-radius: 8px;
-	background: #ededed;
+	border: 1px solid #000;
+	padding: 0.7em 1.6em;
+	border-radius: 20px;
+	outline: none;
 	&:hover {
-		background-color: '#ebebeb';
+		background-color: #000;
+		color: white;
 	}
 `;
+
 
 const Title = styled.h4`
 	margin: 0px;
@@ -19,22 +22,22 @@ const Title = styled.h4`
 
 
 
-export default class Day extends Component {
+export default class Button extends Component {
 
-  static defaultProps = {
+	static defaultProps = {
 		children: "",
 		onClick: () => null
-  }	
+	}
 
-  render() {
-    const { children, onClick } = this.props;
-		
-    return (
-      <Wrapper onClick={onClick}>
-          <Title>
-						 {children}
-					</Title>
+	render() {
+		const { children, onClick } = this.props;
+
+		return (
+			<Wrapper onClick={onClick}>
+				<Title>
+					{children}
+				</Title>
 			</Wrapper>
-    );
-  }
+		);
+	}
 }

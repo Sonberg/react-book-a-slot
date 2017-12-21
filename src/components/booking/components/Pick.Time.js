@@ -2,8 +2,8 @@ import {h, Component} from 'preact';
 import moment from 'moment';
 import styled from 'styled-components';
 
-import Slot from './components/Slot';
-import Header from './components/Header';
+import Slot from './Slot';
+import Header from './Pick.Time.Header';
 
 const Wrapper = styled.div `
 flex: 1;

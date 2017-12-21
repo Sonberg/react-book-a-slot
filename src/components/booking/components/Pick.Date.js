@@ -2,8 +2,8 @@ import {h, Component} from 'preact';
 import moment from 'moment';
 import styled from 'styled-components';
 
-import Header from './components/Header';
-import Day from './components/Day';
+import Header from './Pick.Date.Header';
+import Day from './Day';
 
 const Wrapper = styled.div `
 	flex: 1,auto;

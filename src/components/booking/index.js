@@ -3,14 +3,14 @@ import { h, Component } from 'preact';
 import moment from 'moment';
 import styled from 'styled-components';
 
-import PickDate from './components/PickDate';
-import PickTime from './components/PickTime';
+import PickDate from './components/Pick.Date';
+import PickTime from './components/Pick.Time';
+import Button from './components/Button';
 
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 background: white;
-padding: 2em;
 `;
 
 const ButtonWrapper = styled.div`
@@ -92,15 +92,15 @@ class Booking extends Component {
 
         {step == 0 ? (
           <ButtonWrapper>
-            <button onClick={this.gotoToday}>Idag</button>
-            <button onClick={this.next}>Nästa</button>
+            <Button onClick={this.gotoToday}>Idag</Button>
+            <Button onClick={this.next}>Nästa</Button>
           </ButtonWrapper>
         ) : (null)}
 
           {step == 1 ? (
             <ButtonWrapper>
-            <button onClick={this.prev}>Föregående</button>
-            <button disabled={!selectedTime} onClick={this.didBook}>Bekräfta bokning</button>
+            <Button onClick={this.prev}>Föregående</Button>
+            <Button disabled={!selectedTime} onClick={this.didBook}>Bekräfta bokning</Button>
           </ButtonWrapper>
           ) : (null)}
 

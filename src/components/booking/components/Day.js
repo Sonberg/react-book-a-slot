@@ -4,8 +4,9 @@ import styled from 'styled-components';
 
 
 const Wrapper = styled.td`
-	padding: 0.6em 0.4em;
-	border-radius: 8px;
+	padding: 0.6em 0.5em;
+	border-radius: 0px;
+	border: 1px solid #ddd;
 	background-color: ${({ isToday }) => isToday ? '#ddd' : 'none'};
 	background-color: ${({ isSelected }) => isSelected ? 'black' : 'none'};
 	&:hover {

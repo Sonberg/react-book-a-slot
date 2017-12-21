@@ -5,7 +5,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 	margin-bottom: 1em;
-	flex: 1,
+	flex: 1;
+	border-radius: 100px;
 `;
 
 const Title = styled.h5`
